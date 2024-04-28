@@ -1,0 +1,40 @@
+.newBetEntry
+{
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    background-color: $sectionColor;
+    width: 30%;
+    height: 10%;
+    border: 5px solid $borderColor;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.form
+{
+    width: 400px;
+    color: #ffffff;
+    height: 50px;
+    font-size: 30px;
+    background-color: $sectionColor;
+    
+}
+.betButton
+{
+    background-color: $buttonColor;
+    color:#ffffff;
+    border: 2px solid $buttonBorderColor;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+}
+.betButton:hover
+{   
+    cursor: pointer;
+}
+.betButton:hover, .betButton:focus
+{   
+    filter: brightness(120%);
+    box-shadow: 5px 5px 5px rgb(3, 42, 0);
+}

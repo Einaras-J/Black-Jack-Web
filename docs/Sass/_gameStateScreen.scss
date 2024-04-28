@@ -1,0 +1,49 @@
+#winScreen
+{
+    background-color: rgba(19, 161, 0, 0.612);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-size: 120px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow:3px 3px 2px #000,-3px 3px 2px #000,-3px -3px 0 #000,3px -3px 0 #000;
+    text-align: center;
+    padding:300px 0; 
+}
+#drawScreen
+{
+    background-color: rgba(34, 34, 34, 0.805);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-size: 120px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow:3px 3px 2px #000,-3px 3px 2px #000,-3px -3px 0 #000,3px -3px 0 #000;
+    text-align: center;
+    padding:450px 0; 
+}
+#loseScreen
+{
+    background-color: rgba(161, 0, 0, 0.612);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-size: 120px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow:3px 3px 2px #000,-3px 3px 2px #000,-3px -3px 0 #000,3px -3px 0 #000;
+    text-align: center;
+    padding:300px 0; 
+}
+

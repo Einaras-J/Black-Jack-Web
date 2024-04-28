@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Jack</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Deck Icon.png" />
+    <link id="stylesheet" rel="stylesheet" href="Sass/style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="loseScreen">
+        <p id="lostMoney"></p>
+    </div>
+    <div id="winScreen">
+        <p id="winMoney"></p>
+    </div>
+    <div id="drawScreen">PUSH</div>
+
+    <div class="newBetEntry">
+        <input id="newBet" type="text" size="10" autocomplete="off" class="form"/>
+        <button id="placeBet" title="Place Bet" class="betButton">Bet</button>    
+    </div>
+
+    <section class="decition">
+        <button id="hitButton" title="Add Another Card" class="button">HIT</button>
+        <button id="standButton" title="Lock In Cards" class="button">STAND</button>
+    </section>
+    
+    <section class="dealersCards">
+        <div id="dealersSide">
+            <label for="yourCards" class="title">Dealer</label>
+            <label for="dealersCards" id="dealersScore" class="score"></label>
+            <br>
+        </div>
+    </section>
+
+    <section class="yourCards">
+        <div id="yourSide">
+            <label for="yourCards" class="title">You</label>
+            <label for="yourCards" id="yourScore" class="score"></label>
+            <br>         
+        </div>
+    </section>
+
+    <div class="balance">
+        <label for="balance" id="balance" title="Your Balance"></label>
+    </div>
+
+    <div class="bet">
+        <label for="bet" id="currBet" title="Your Bet"></label>
+    </div>
+
+    <div class="deck">
+        <label for="deck" id="currDeck" title="Cards Left In Deck" ></label>
+        <img src="Deck Icon.png" width="50" height="50">
+    </div>
+</body>
+</html>
