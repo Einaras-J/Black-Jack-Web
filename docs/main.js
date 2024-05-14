@@ -6,7 +6,6 @@ let yourScore = 0;
 let deckNum = 102;
 let deckIndex = 0;
 let hideCard = false;
-let hidenImg = document.createElement("img"); hidenImg.src = "./Cards/back.png"; hidenImg.style.width = "5vw"; hidenImg.style.height = "7.25vw"; hidenImg.id = "hidenCard";
 let realCard;
 let realScore;
 let yourAce = 0;
@@ -14,6 +13,8 @@ let dealerAce = 0;
 let cardsAreDealt = false;
 let deck = [];
 let payoutMulti = 1;
+let checkIfPortrait = window.matchMedia("(orientation: portrait)");
+let hidenImg = document.createElement("img"); hidenImg.src = "./Cards/back.png"; hidenImg.style.width = "5vw"; if(checkIfPortrait.matches) hidenImg.style.width = "9vw"; hidenImg.style.height = "7.25vw"; if(checkIfPortrait.matches) hidenImg.style.height = "13vw"; hidenImg.id = "hidenCard";
 function shuffleDeck() 
 {
     for (let i = deck.length - 1; i > 0; i--) 
@@ -25,121 +26,121 @@ function shuffleDeck()
 
 for(let i = 0; i < 2; i++) // Image array
 {
-    let img = document.createElement("img"); img.src = "./Cards/2_of_clubs.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "2" // Create card
+    let img = document.createElement("img"); img.src = "./Cards/2_of_clubs.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "2" // Create card
     let obj = {name: "2", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/2_of_diamonds.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "2"// Create card
+    img = document.createElement("img"); img.src = "./Cards/2_of_diamonds.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "2"// Create card
     obj = {name: "2", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/2_of_hearts.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "2"// Create card
+    img = document.createElement("img"); img.src = "./Cards/2_of_hearts.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "2"// Create card
     obj = {name: "2", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/2_of_spades.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "2"// Create card
+    img = document.createElement("img"); img.src = "./Cards/2_of_spades.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "2"// Create card
     obj = {name: "2", image: img}; deck.push(obj); // Add card to arr
 
-    img = document.createElement("img"); img.src = "./Cards/3_of_clubs.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "3"// Create card
+    img = document.createElement("img"); img.src = "./Cards/3_of_clubs.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "3"// Create card
     obj = {name: "3", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/3_of_diamonds.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "3"// Create card
+    img = document.createElement("img"); img.src = "./Cards/3_of_diamonds.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "3"// Create card
     obj = {name: "3", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/3_of_hearts.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "3"// Create card
+    img = document.createElement("img"); img.src = "./Cards/3_of_hearts.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "3"// Create card
     obj = {name: "3", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/3_of_spades.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "3"// Create card
+    img = document.createElement("img"); img.src = "./Cards/3_of_spades.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "3"// Create card
     obj = {name: "3", image: img}; deck.push(obj); // Add card to arr
 
-    img = document.createElement("img"); img.src = "./Cards/4_of_clubs.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "4"// Create card
+    img = document.createElement("img"); img.src = "./Cards/4_of_clubs.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "4"// Create card
     obj = {name: "4", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/4_of_diamonds.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "4"// Create card
+    img = document.createElement("img"); img.src = "./Cards/4_of_diamonds.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "4"// Create card
     obj = {name: "4", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/4_of_hearts.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "4"// Create card
+    img = document.createElement("img"); img.src = "./Cards/4_of_hearts.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "4"// Create card
     obj = {name: "4", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/4_of_spades.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "4"// Create card
+    img = document.createElement("img"); img.src = "./Cards/4_of_spades.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "4"// Create card
     obj = {name: "4", image: img}; deck.push(obj); // Add card to arr
 
-    img = document.createElement("img"); img.src = "./Cards/5_of_clubs.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "5"// Create card
+    img = document.createElement("img"); img.src = "./Cards/5_of_clubs.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "5"// Create card
     obj = {name: "5", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/5_of_diamonds.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "5"// Create card
+    img = document.createElement("img"); img.src = "./Cards/5_of_diamonds.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "5"// Create card
     obj = {name: "5", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/5_of_hearts.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "5"// Create card
+    img = document.createElement("img"); img.src = "./Cards/5_of_hearts.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "5"// Create card
     obj = {name: "5", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/5_of_spades.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "5"// Create card
+    img = document.createElement("img"); img.src = "./Cards/5_of_spades.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "5"// Create card
     obj = {name: "5", image: img}; deck.push(obj); // Add card to arr
 
-    img = document.createElement("img"); img.src = "./Cards/6_of_clubs.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "6"// Create card
+    img = document.createElement("img"); img.src = "./Cards/6_of_clubs.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "6"// Create card
     obj = {name: "6", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/6_of_diamonds.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "6"// Create card
+    img = document.createElement("img"); img.src = "./Cards/6_of_diamonds.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "6"// Create card
     obj = {name: "6", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/6_of_hearts.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "6"// Create card
+    img = document.createElement("img"); img.src = "./Cards/6_of_hearts.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "6"// Create card
     obj = {name: "6", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/6_of_spades.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "6"// Create card
+    img = document.createElement("img"); img.src = "./Cards/6_of_spades.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "6"// Create card
     obj = {name: "6", image: img}; deck.push(obj); // Add card to arr
 
-    img = document.createElement("img"); img.src = "./Cards/7_of_clubs.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "7"// Create card
+    img = document.createElement("img"); img.src = "./Cards/7_of_clubs.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "7"// Create card
     obj = {name: "7", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/7_of_diamonds.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "7"// Create card
+    img = document.createElement("img"); img.src = "./Cards/7_of_diamonds.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "7"// Create card
     obj = {name: "7", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/7_of_hearts.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "7"// Create card
+    img = document.createElement("img"); img.src = "./Cards/7_of_hearts.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "7"// Create card
     obj = {name: "7", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/7_of_spades.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "7"// Create card
+    img = document.createElement("img"); img.src = "./Cards/7_of_spades.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "7"// Create card
     obj = {name: "7", image: img}; deck.push(obj); // Add card to arr
 
-    img = document.createElement("img"); img.src = "./Cards/8_of_clubs.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "8"// Create card
+    img = document.createElement("img"); img.src = "./Cards/8_of_clubs.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "8"// Create card
     obj = {name: "8", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/8_of_diamonds.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "8"// Create card
+    img = document.createElement("img"); img.src = "./Cards/8_of_diamonds.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "8"// Create card
     obj = {name: "8", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/8_of_hearts.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "8"// Create card
+    img = document.createElement("img"); img.src = "./Cards/8_of_hearts.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "8"// Create card
     obj = {name: "8", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/8_of_spades.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "8"// Create card
+    img = document.createElement("img"); img.src = "./Cards/8_of_spades.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "8"// Create card
     obj = {name: "8", image: img}; deck.push(obj); // Add card to arr
 
-    img = document.createElement("img"); img.src = "./Cards/9_of_clubs.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "9"// Create card
+    img = document.createElement("img"); img.src = "./Cards/9_of_clubs.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "9"// Create card
     obj = {name: "9", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/9_of_diamonds.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "9"// Create card
+    img = document.createElement("img"); img.src = "./Cards/9_of_diamonds.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "9"// Create card
     obj = {name: "9", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/9_of_hearts.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "9"// Create card
+    img = document.createElement("img"); img.src = "./Cards/9_of_hearts.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "9"// Create card
     obj = {name: "9", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/9_of_spades.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "9"// Create card
+    img = document.createElement("img"); img.src = "./Cards/9_of_spades.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "9"// Create card
     obj = {name: "9", image: img}; deck.push(obj); // Add card to arr
 
-    img = document.createElement("img"); img.src = "./Cards/10_of_clubs.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "10"// Create card
+    img = document.createElement("img"); img.src = "./Cards/10_of_clubs.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "10"// Create card
     obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/10_of_diamonds.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "10"// Create card
+    img = document.createElement("img"); img.src = "./Cards/10_of_diamonds.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "10"// Create card
     obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/10_of_hearts.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "10"// Create card
+    img = document.createElement("img"); img.src = "./Cards/10_of_hearts.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "10"// Create card
     obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/10_of_spades.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "10"// Create card
-    obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
-
-    img = document.createElement("img"); img.src = "./Cards/ace_of_clubs.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "11"// Create card
-    obj = {name: "11", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/ace_of_diamonds.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "11"// Create card
-    obj = {name: "11", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/ace_of_hearts.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "11"// Create card
-    obj = {name: "11", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/ace_of_spades.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "11"// Create card
-    obj = {name: "11", image: img}; deck.push(obj); // Add card to arr
-
-    img = document.createElement("img"); img.src = "./Cards/jack_of_clubs.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "10"// Create card
-    obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/jack_of_diamonds.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "10"// Create card
-    obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/jack_of_hearts.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "10"// Create card
-    obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/jack_of_spades.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "10"// Create card
+    img = document.createElement("img"); img.src = "./Cards/10_of_spades.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "10"// Create card
     obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
 
-    img = document.createElement("img"); img.src = "./Cards/king_of_clubs.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "10"// Create card
+    img = document.createElement("img"); img.src = "./Cards/ace_of_clubs.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "11"// Create card
+    obj = {name: "11", image: img}; deck.push(obj); // Add card to arr
+    img = document.createElement("img"); img.src = "./Cards/ace_of_diamonds.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "11"// Create card
+    obj = {name: "11", image: img}; deck.push(obj); // Add card to arr
+    img = document.createElement("img"); img.src = "./Cards/ace_of_hearts.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "11"// Create card
+    obj = {name: "11", image: img}; deck.push(obj); // Add card to arr
+    img = document.createElement("img"); img.src = "./Cards/ace_of_spades.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "11"// Create card
+    obj = {name: "11", image: img}; deck.push(obj); // Add card to arr
+
+    img = document.createElement("img"); img.src = "./Cards/jack_of_clubs.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "10"// Create card
     obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/king_of_diamonds.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "10"// Create card
+    img = document.createElement("img"); img.src = "./Cards/jack_of_diamonds.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "10"// Create card
     obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/king_of_hearts.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "10"// Create card
+    img = document.createElement("img"); img.src = "./Cards/jack_of_hearts.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "10"// Create card
     obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/king_of_spades.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "10"// Create card
+    img = document.createElement("img"); img.src = "./Cards/jack_of_spades.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "10"// Create card
     obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
 
-    img = document.createElement("img"); img.src = "./Cards/queen_of_clubs.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "10"// Create card
+    img = document.createElement("img"); img.src = "./Cards/king_of_clubs.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "10"// Create card
     obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/queen_of_diamonds.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "10"// Create card
+    img = document.createElement("img"); img.src = "./Cards/king_of_diamonds.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "10"// Create card
     obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/queen_of_hearts.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "10"// Create card
+    img = document.createElement("img"); img.src = "./Cards/king_of_hearts.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "10"// Create card
     obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
-    img = document.createElement("img"); img.src = "./Cards/queen_of_spades.png"; img.style.width = "5vw"; img.style.height = "7.25vw"; img.alt = "10"// Create card
+    img = document.createElement("img"); img.src = "./Cards/king_of_spades.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "10"// Create card
+    obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
+
+    img = document.createElement("img"); img.src = "./Cards/queen_of_clubs.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "10"// Create card
+    obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
+    img = document.createElement("img"); img.src = "./Cards/queen_of_diamonds.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "10"// Create card
+    obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
+    img = document.createElement("img"); img.src = "./Cards/queen_of_hearts.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "10"// Create card
+    obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
+    img = document.createElement("img"); img.src = "./Cards/queen_of_spades.png"; img.style.width = "5vw"; if(checkIfPortrait.matches) img.style.width = "9vw"; img.style.height = "7.25vw"; if(checkIfPortrait.matches) img.style.height = "13vw"; img.alt = "10"// Create card
     obj = {name: "10", image: img}; deck.push(obj); // Add card to arr
 }
 

@@ -65,7 +65,7 @@ body {
   border: 0.2vw solid #002307;
   color: #fff;
   font-size: 2.5vw;
-  text-shadow: 0.2vw 0.2vw 0.13vw #000, -0.2vw 0.2vw 0.13vw #000, -0.2vw -0.2vw 0 #000, 0.2vw -0.2vw 0 #000;
+  text-shadow: 0.15vw 0.1vw 0.13vw #000, -0.15vw 0.1vw 0.13vw #000, -0.15vw -0.1vw 0 #000, 0.15vw -0.15vw 0 #000;
 }
 
 .bet {
@@ -83,7 +83,7 @@ body {
   padding: 10px;
   background-color: #736900;
   color: #fff;
-  text-shadow: 0.2vw 0.2vw 0.13vw #000, -0.2vw 0.2vw 0.13vw #000, -0.2vw -0.2vw 0 #000, 0.2vw -0.2vw 0 #000;
+  text-shadow: 0.15vw 0.15vw 0.13vw #000, -0.15vw 0.15vw 0.13vw #000, -0.15vw -0.15vw 0 #000, 0.15vw -0.15vw 0 #000;
   font-size: 3vw;
 }
 
@@ -172,6 +172,138 @@ body {
   box-shadow: 0.3vw 0.3vw 0.3vw rgb(3, 42, 0);
 }
 
+
+
+
+
+
+
+@media (orientation: portrait)
+{
+  .yourCards {
+    position: fixed;
+    bottom: 0;
+    left: 5vw;
+    width: 77.5vw;
+    height: 34vw;
+    border-top-right-radius: 1vw;
+    line-height: 6vw;
+    padding: 6vw;
+    line-height: 15vw;
+  }
+  
+  .dealersCards {
+    position: fixed;
+    bottom: 0;
+    left: 5vw;
+    width: 77.5vw;
+    height: 34vw;
+    border-bottom-left-radius: 1vw;
+    line-height: 6vw;
+    padding: 6vw;
+    line-height: 15vw;
+  }
+
+  .decition {
+    position: fixed;
+    bottom: 67vw;
+    left: 5vw;
+    gap: 6vw;
+    padding: 2vw;
+  }
+  .button {
+    width: 21.5vw;
+    height: 5vw;
+    font-size: 2vw;
+  }
+
+  .newBetEntry {
+    position: fixed;
+    bottom: 51.5vw;
+    left: 5vw;
+    padding: 1vw;
+    gap: 4vw;
+  }
+  .betButton {
+    width: 8vw;
+    height: 8vw;
+    font-size: 2.5vw;
+  }
+  .form {
+    width: 37.3vw;
+    height: 4vw;
+    font-size: 3vw;
+  }
+
+  .balance {
+    position: fixed;
+    bottom: 51.5vw;
+    left: 63vw;
+    width: 32vw;
+    height: 10vw;
+    font-size: 5vw;
+  }
+  .title {
+    font-size: 10vw;
+  }
+  .score {
+    font-size: 6vw;
+  }
+
+  .deck {
+    position: fixed;
+    top: 50vw;
+    right: 5vw;
+    font-size: 5vw;
+  }
+  #deckIcon {
+    height: 5vw;
+    width: 5vw;
+  }
+  .bet {
+    font-size: 8vw;
+    margin: 0;
+    position: absolute;
+    top: 38.5%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  #drawText {
+    font-size: 10vw;
+    margin: 0;
+    position: absolute;
+    top: 38.5%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  #winMoney {
+    font-size: 10vw;
+    margin: 0;
+    position: absolute;
+    top: 38.5%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  #lostMoney {
+    font-size: 10vw;
+    margin: 0;
+    position: absolute;
+    top: 38.5%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+
+
+
+
+
 #winScreen {
   background-color: rgba(19, 161, 0, 0.612);
   position: fixed;
@@ -201,7 +333,7 @@ body {
   color: #fff;
   text-shadow: 0.2vw 0.2vw 0.13vw #000, -0.2vw 0.2vw 0.13vw #000, -0.2vw -0.2vw 0 #000, 0.2vw -0.2vw 0 #000;
   text-align: center;
-  padding: 21vw 0;
+  padding: 15vw 0;
 }
 
 #loseScreen {
